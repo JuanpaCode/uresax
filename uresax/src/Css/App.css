@@ -1,0 +1,77 @@
+:root {
+  --primary-color:#5087F1;
+  --sidebar-width:350px;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+.sidebar .vertical__navigation {
+  list-style: none;
+  margin: 0;
+  padding: 5rem 0;
+}
+.sidebar .vertical__navigation .nav__item {
+  cursor: pointer;
+  position: relative;
+  right: -20px;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  padding: 1rem 1.8rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 100%;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.sidebar .vertical__navigation .nav__item.active {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.sidebar .vertical__navigation .nav__item span {
+  margin-left: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  user-select: none;
+}
+
+.sheet {
+  position: relative;
+  left: -20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+.sheet .d-flex {
+  display: flex;
+}
+.sheet .company_status .status_box {
+  margin-right: 2rem;
+}
+.sheet .text-success {
+  color: #1fd31f;
+}
+.sheet .text-danger {
+  color: #ff5858;
+}
+.sheet span {
+  color: grey;
+}
