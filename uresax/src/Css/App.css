@@ -1,12 +1,21 @@
 :root {
   --primary-color:#5087F1;
   --sidebar-width:350px;
+  --success-color:#21e4b3;
+  --success-light-color:#effffb;
+  --danger-color:#fc6f6f;
+  --danger-light-color:#ffefef;
 }
 
 .sidebar {
-  width: var(--sidebar-width);
+  width: 250px;
   min-height: 100vh;
   background-color: var(--primary-color);
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .sidebar .vertical__navigation {
   list-style: none;
@@ -27,6 +36,7 @@
   width: 100%;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
+  transition: all 0.3s ease;
 }
 .sidebar .vertical__navigation .nav__item.active {
   background-color: #fff;
@@ -39,6 +49,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 * {
@@ -51,17 +62,47 @@ body {
 }
 
 .sheet {
-  position: relative;
-  left: -20px;
+  position: absolute;
+  left: 235px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: #fff;
-  width: 100%;
+  flex-shrink: 0;
   min-height: 100vh;
   padding: 4rem 2rem;
+  z-index: 30;
+  width: calc(100vw - 245px);
+}
+.sheet .cursor-pointer {
+  cursor: pointer;
+}
+.sheet .fs-1 {
+  font-size: 1rem;
+}
+.sheet .fs-2 {
+  font-size: 0.9rem;
+}
+.sheet .fs-3 {
+  font-size: 0.8rem;
+}
+.sheet .fs-4 {
+  font-size: 0.7rem;
+}
+.sheet .fs-5 {
+  font-size: 0.6rem;
+}
+.sheet h1, .sheet h2, .sheet h3, .sheet h4, .sheet h4, .sheet h5, .sheet h6 {
+  margin: 0;
+  color: var(--primary-color);
 }
 .sheet .d-flex {
   display: flex;
+}
+.sheet .align-items-center {
+  align-items: center;
+}
+.sheet .justify-content-between {
+  justify-content: space-between;
 }
 .sheet .company_status .status_box {
   margin-right: 2rem;
@@ -72,6 +113,112 @@ body {
 .sheet .text-danger {
   color: #ff5858;
 }
+.sheet .text-black {
+  color: black;
+}
 .sheet span {
+  color: #d1cfcf;
+}
+.sheet .spacer {
+  flex: 1;
+}
+.sheet .user__actions {
+  border: 1px solid #eee;
+  padding: 0.5rem 0.5rem;
+  min-width: 180px;
+  min-height: 60px;
+  border-radius: 100px;
+}
+.sheet .user__actions .content {
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
+.sheet .user__actions .content .role {
+  font-size: 0.8rem;
+}
+.sheet .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #eee;
+}
+.sheet .tap-animated {
+  transition: transform 0.2s ease;
+}
+.sheet .tap-animated:active {
+  transform: scale(0.8);
+}
+.sheet .app__logs .log__box {
+  margin-right: 1.8rem;
+}
+.sheet .app__logs .log__box .title {
+  margin-bottom: 0.5rem;
+}
+.sheet .app__logs .log__box .content {
+  padding-left: 0.8rem;
+}
+.sheet .todo__list .todo__item {
+  margin-bottom: 2.2rem;
+}
+.sheet .todo__list .todo__item .content {
+  padding-left: 1.5rem;
+}
+.sheet .todo__list .todo__item .content .price {
+  margin-bottom: 0.5rem;
+}
+.sheet .todo__list .todo__item .content .title {
+  margin-bottom: 0.5rem;
+}
+.sheet .todo__list .todo__item .tools {
+  padding-right: 1rem;
+}
+.sheet .todo__list .todo__item .tools .icon__button {
+  margin-left: 1rem;
+}
+.sheet .icon__button {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
   color: grey;
+}
+.sheet .hover-success:hover {
+  color: var(--success-color);
+  background-color: var(--success-light-color);
+}
+.sheet .hover-danger:hover {
+  color: var(--danger-color);
+  background-color: var(--danger-light-color);
+}
+.sheet .scrollbar {
+  height: 80vh;
+}
+.sheet .scrollbar::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+.sheet .scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 50px;
+}
+.sheet .scrollbar-vertical {
+  overflow-y: auto;
+}
+.sheet .btn {
+  font-weight: 600;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 180px;
+}
+.sheet .btn__primary {
+  color: #fff;
+  background-color: var(--primary-color);
 }

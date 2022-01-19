@@ -1,7 +1,12 @@
 .sidebar{
-    width:var(--sidebar-width);
+    width:250px;
     min-height:100vh;
     background-color: var(--primary-color);
+    flex-shrink:0;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
 
     .vertical__navigation{
         list-style: none;
@@ -21,6 +26,9 @@
             width:100%;
             border-top-left-radius: 100px;
             border-bottom-left-radius: 100px;
+            transition: all .3s ease;
+
+        
 
             &.active{
                 background-color: #fff;
